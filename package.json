@@ -8,9 +8,11 @@
     "faker": "^5.1.0",
     "mongoose": "^5.10.3",
     "nodemon": "^2.0.4",
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "scripts.start": {
     "install": "npm install",
     "test": "node app.js"
