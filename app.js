@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+/*
 const Todo = require("./todo")
 const mongoose = require("mongoose");
 
@@ -17,11 +18,12 @@ mongoose.connect(url, {
   console.log(error);
 });
 
+*/
 app.get("/", (req, res) => {
   res.json({"message": "Welcome to this todo, you to provide title, category and note"
   });
 });
-
+/*
 app.post("/", (req, res) => {
   const todo = {
     "title" : req.body.title,
@@ -49,7 +51,7 @@ app.get("/todo", (req, res) => {
     }
   });
 });
-
+*/
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server running on port ${port}`);
