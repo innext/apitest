@@ -13,7 +13,7 @@
   },
   "devDependencies": {
   },
-  "scripts.start": {
+  "scripts": {
     "install": "npm install",
     "test": "node app.js"
   },
