@@ -2,10 +2,11 @@
 
 
 const express = require("express");
-const app = express();
+const app = express()
 const Todo = require("./todo")
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
+const bodyParser = require("body-parser")
 const dotenv = require('dotenv');
 dotenv.config()
 
@@ -23,6 +24,9 @@ mongoose.connect(url, {
   console.log("unable to connect MongoDB");
   console.log(error);
 });
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 app.get("/", (req, res) => {
   res.json({"message": "Welcome to this todo, you to provide title, category and note"
