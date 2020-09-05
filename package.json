@@ -10,7 +10,7 @@
     "nodemon": "^2.0.4"
   },
   "devDependencies": {},
-  "start scripts": {
+  "scripts.start": {
     "install": "npm install",
     "test": "node app.js"
   },
@@ -19,9 +19,7 @@
     "url": "github.com/innext/apitest"
   },
   "keywords": [
-    "api",
-    "faker",
-    "json"
+    "api"
   ],
   "author": "Kola-Adelakin Inioluwa G",
   "license": "ISC"
