@@ -14,7 +14,7 @@
   "devDependencies": {
   },
   "scripts": {
-    "install": "npm install",
+    "start": "npm install",
     "test": "node app.js"
   },
   "repository": {
