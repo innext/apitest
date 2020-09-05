@@ -29,13 +29,19 @@ app.get("/", (req, res) => {
   });
 });
 
+const todo = 
+{
+  "title":"",
+  "category":"",
+  "note":""
+}
+
 app.post("/", (req, res) => {
-
-  const todo = {}
-        todo.title = req.body.title,
-        todo.category = req.body.category,
+        
+        todo.title = req.body.title
+        todo.category = req.body.category
         todo.note = req.body.note
-
+        res.json(todo)
   Todo.newTodo(todo, (err, todo) => {
     if(err) {
       console.log(err);
