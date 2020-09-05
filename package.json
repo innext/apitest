@@ -1,7 +1,7 @@
 {
-  "name": "api-with-faker",
+  "name": "apitest",
   "version": "1.0.0",
-  "description": "create an api endpoint with faker to return json file",
+  "description": "to test api",
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
