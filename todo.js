@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/*const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema({
 
@@ -26,7 +26,7 @@ const Todo = module.exports = mongoose.model("Todo", todoSchema);
 
 module.exports.sendAllTodo = (allTodo, limit) => {
         Todo.find(allTodo).lean().limit(limit);
-        }
+        }*/
 
 module.exports.newTodo = (todo, callback) => {
         todo.save(callback);
