@@ -10,7 +10,7 @@
     "nodemon": "^2.0.4"
   },
   "devDependencies": {},
-  "scripts": {
+  "start scripts": {
     "install": "npm install",
     "test": "node app.js"
   },
