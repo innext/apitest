@@ -30,8 +30,19 @@ app.use(bodyParser.json())
 
 app.get("/", (req, res) => {
   res.json({"message": "Welcome to this todo, you to provide title, category and note"
-  });
-});
+  })
+})
+
+app.get("/todo", (req, res) => {
+  Todo.find({}, (err, allTodo) => {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log(allTodo);
+      res.send(allTodo);
+    }
+  })
+})
 
 const todo = 
 {
@@ -45,27 +56,18 @@ app.post("/", (req, res) => {
         todo.title = req.body.title
         todo.category = req.body.category
         todo.note = req.body.note
-        res.json(todo)
+        
   Todo.newTodo(todo, (err, todo) => {
     if(err) {
-      console.log(err);
+      res.json("success": "false")
     } else {
-      console.log(todo);
+      res.json(todo)
     }
-    res.redirect("/todo", 201);
-  });
-});
+  
+  })
+})
 
-app.get("/todo", (req, res) => {
-  Todo.find({}, (err, allTodo) => {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log(allTodo);
-      res.send(allTodo);
-    }
-  });
-});
+
 
 const port = process.env.PORT;
 app.listen(port, () => {
