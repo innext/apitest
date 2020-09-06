@@ -57,7 +57,7 @@ app.post("/", (req, res) => {
         todo.category = req.body.category
         todo.note = req.body.note
         
-  Todo.newTodo(todo, (err, todo) => {
+  Todo.newTodo(todo, (err) => {
     if(err) {
       res.json({"success": "false"})
     } else {
