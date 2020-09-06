@@ -24,6 +24,12 @@ note : {
 
 const Todo = module.exports = mongoose.model("Todo", todoSchema);
 
-module.exports.newTodo = (todo, callback) => {
-        todo.save(callback);
+module.exports.newTodo = (todo) => {
+        todo.save()
+        .then(new_todo => {
+            res.json(new_todo)
+        })
+        .catch(err => {
+            res.json({"error": err.message})
+        })
         }

@@ -54,14 +54,8 @@ app.post("/", (req, res) => {
                 }
 
         
-  Todo.newTodo(todo, (err, new_todo) => {
-    if(err) {
-      res.json({"success": "false"})
-    } else {
-      res.json(new_todo)
-    }
+  Todo.newTodo(todo)
   
-  })
 })
 
 
