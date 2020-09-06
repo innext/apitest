@@ -1,4 +1,4 @@
-/*const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema({
 
@@ -30,4 +30,4 @@ module.exports.sendAllTodo = (allTodo, limit) => {
 
 module.exports.newTodo = (todo, callback) => {
         todo.save(callback);
-        }*/
+        }
