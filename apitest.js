@@ -36,10 +36,10 @@ app.get("/", (req, res) => {
 app.get("/todo", (req, res) => {
   Todo.find({}, (err, allTodo) => {
     if(err) {
-      console.log(err);
+      console.log(err)
     } else {
-      console.log(allTodo);
-      res.send(allTodo);
+      console.log(allTodo)
+      res.json(allTodo)
     }
   })
 })
@@ -59,7 +59,7 @@ app.post("/", (req, res) => {
         
   Todo.newTodo(todo, (err, todo) => {
     if(err) {
-      res.json("success": "false")
+      res.json({"success": "false"})
     } else {
       res.json(todo)
     }
@@ -69,7 +69,7 @@ app.post("/", (req, res) => {
 
 
 
-const port = process.env.PORT;
+const port = process.env.PORT
 app.listen(port, () => {
   console.log(`server running on port ${port}`);
-});
+})
