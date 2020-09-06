@@ -44,24 +44,21 @@ app.get("/todo", (req, res) => {
   })
 })
 
-const todo = 
-{
-  "title":"",
-  "category":"",
-  "note":""
-}
 
 app.post("/", (req, res) => {
+        const todo = 
+                {
+                "title":req.body.title,
+                "category":req.body.category,
+                "note":req.body.note
+                }
+
         
-        todo.title = req.body.title
-        todo.category = req.body.category
-        todo.note = req.body.note
-        
-  Todo.newTodo(todo, (err) => {
+  Todo.newTodo(todo, (err, new_todo) => {
     if(err) {
       res.json({"success": "false"})
     } else {
-      res.json(todo)
+      res.json(new_todo)
     }
   
   })
