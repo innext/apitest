@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.json({"message": "Welcome to this todo, you to provide title, category and note"});
+  res.json({"message": "Welcome to this todo, you to provide title, category and note. Send get require to /todo to see all"});
 });
 
 app.get("/todo", (req, res) => {
