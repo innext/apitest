@@ -7,19 +7,11 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-<<<<<<< HEAD
     "mongoose": "^5.10.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
-=======
-    "faker": "^5.1.0",
-    "mongoose": "^5.10.3",
-    "nodemon": "^2.0.4"
-  },
-  "devDependencies": {},
->>>>>>> f6c994413d1f3852a002382e9e8af8a3853c8310
   "scripts": {
     "start": "node apitest.js"
   },
